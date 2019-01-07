@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class student {
+    public:
+    char xx[20];
+    char name[20];
+    int age;
+ 
+    void print()
+    {
+        cout << xx << "大学的" << name << "年龄" << age << endl;
+    }
+};
+class g_student:public student {
+public: char ds[20];
+ 
+     
+    void print()
+    {
+        cout << xx<< "大学的" << name << "年龄" << age << "导师是"<<ds<<endl;
+    }
+};
+int main()
+{
+    g_student czq;
+    cin >> czq.xx >> czq.name >> czq.age >> czq.ds;
+    czq.print();
+}
