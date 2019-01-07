@@ -1,0 +1,55 @@
+#include <iostream>
+#include<string>
+using namespace std;
+class staff {
+private:
+    string level;
+public:
+    void sc1()
+    {
+        cout << "级别是" << level << endl;
+    };
+    void set1(string a)
+    {
+        level = a;
+    }
+};
+class teacher {
+private:
+    string title;
+public:
+    void sc2()
+    {
+        cout << "职称是" << title<< endl;
+    };
+    void set2(string b)
+    {
+        title = b;
+    }
+ 
+};
+class staffteacher :public staff, public teacher {
+private:
+    string name;
+public:
+    void sc3()
+    {
+        cout << name << endl;
+    }
+    void set3(string c)
+    {
+        name = c;
+    }
+};
+int main()
+{
+    string a, b, c;
+    cin >> a >> b >> c;
+    staffteacher lp;
+    lp.set1(a);
+    lp.set2(b);
+    lp.set3(c);
+    lp.sc3();
+    lp.sc1();
+    lp.sc2();
+}
